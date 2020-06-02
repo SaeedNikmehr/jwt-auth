@@ -8,7 +8,11 @@ Route::group(['prefix' => 'auth','middleware'=>'jwt'], function () {
 
     Route::post('logout', 'api\AuthController@logout');
     Route::post('refresh', 'api\AuthController@refresh');
-    Route::post('me', 'api\AuthController@me');
+
 
 });
+
 Route::post('auth/login', 'api\AuthController@login');
+Route::post('auth/register', 'api\AuthController@register');
+Route::post('auth/send-reset-password-email', 'api\ResetPasswordController@sendEmail');
+Route::post('auth/reset-password', 'api\ChangePasswordController@process');
