@@ -3,11 +3,15 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'auth','middleware'=>'jwt'], function () {
+Route::group(['middleware'=>'jwt'], function () {
 
+    Route::post('auth/logout', 'api\AuthController@logout');
+    Route::post('auth/refresh', 'api\AuthController@refresh');
 
-    Route::post('logout', 'api\AuthController@logout');
-    Route::post('refresh', 'api\AuthController@refresh');
+    Route::get('users', 'api\UserController@users');
+    Route::post('users/register', 'api\UserController@register');
+    Route::put('users/{id}', 'api\UserController@update');
+    Route::delete('users/{id}', 'api\UserController@delete');
 
 
 });
