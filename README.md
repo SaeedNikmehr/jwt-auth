@@ -3,7 +3,7 @@
 </p>
 <p align="left">
      do not forget run migrations.</br>
-     i added one extra layer for data manipulation according to repository design pattern. </ br>
+     i added one extra layer for data manipulation according to repository design pattern. </br>
      for email service i used mailtrap.io
 </p>
 <p align="left">
