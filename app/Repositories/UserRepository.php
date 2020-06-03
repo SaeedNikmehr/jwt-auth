@@ -13,7 +13,7 @@ namespace App\Repositories;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 
-class UserRepository
+class UserRepository implements UserRepositoryInterface
 {
 
     public function users(){

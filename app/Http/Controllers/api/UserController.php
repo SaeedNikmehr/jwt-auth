@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\UserRepository;
+use App\Repositories\UserRepositoryInterface;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -12,7 +13,7 @@ class UserController extends Controller
 {
     private $userRepository;
 
-    public function __construct(UserRepository $userRepository){
+    public function __construct(UserRepositoryInterface $userRepository){
         $this->userRepository = $userRepository;
     }
 

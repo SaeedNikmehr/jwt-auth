@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "95f1638b-33e8-4a1c-bc8b-1835a65e81c1",
+		"name": "collection1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "saeed",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "example@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "example@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "example@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "resetToken",
+							"value": "xeqDvNDyXifODQwUViqgxCCLiVw6kqfWvnyjCnkvyXfyl7i9eWzKSSwhtj43",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/auth/reset-password",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"auth",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send reset password email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "example@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/auth/send-reset-password-email",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"auth",
+						"send-reset-password-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jvb3RcL2p3dEFwcFwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTkxMTcxOTI2LCJleHAiOjE1OTExNzMxMjYsIm5iZiI6MTU5MTE3MTkyNiwianRpIjoiU0I1YkhGcVg1bnVQZjFleiIsInN1YiI6NCwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.cUxyFHspLw81IAc1fqFBFmaxaolvWH5k24V_5AskIyY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/auth/refresh",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jvb3RcL2p3dEFwcFwvcHVibGljXC9hcGlcL2F1dGhcL3JlZ2lzdGVyIiwiaWF0IjoxNTkxMTA4NjIxLCJleHAiOjE1OTExMDk4MjEsIm5iZiI6MTU5MTEwODYyMSwianRpIjoiek9IeHdJaTNIUWt5NHNQWCIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.VXOpqQd2iE4DZt_kkORhwA-a1WX-7sSI1l3KTMT_Bv4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/users",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jvb3RcL2p3dEFwcFwvcHVibGljXC9hcGlcL2F1dGhcL3JlZ2lzdGVyIiwiaWF0IjoxNTkxMTcyNTkzLCJleHAiOjE1OTExNzM3OTMsIm5iZiI6MTU5MTE3MjU5MywianRpIjoiTTNHWkMxTXhmWmJpQllxbyIsInN1YiI6NSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.1iM7Qc0vSIwbs-aGiBnBygrm2CJHi6wnCaagMBvEghs"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "mohammad",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "example1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/users/register",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jvb3RcL2p3dEFwcFwvcHVibGljXC9hcGlcL2F1dGhcL3JlZ2lzdGVyIiwiaWF0IjoxNTkxMTcyNTkzLCJleHAiOjE1OTExNzM3OTMsIm5iZiI6MTU5MTE3MjU5MywianRpIjoiTTNHWkMxTXhmWmJpQllxbyIsInN1YiI6NSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.1iM7Qc0vSIwbs-aGiBnBygrm2CJHi6wnCaagMBvEghs"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/users/1",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Jvb3RcL2p3dEFwcFwvcHVibGljXC9hcGlcL2F1dGhcL3JlZ2lzdGVyIiwiaWF0IjoxNTkxMTcyNTkzLCJleHAiOjE1OTExNzM3OTMsIm5iZiI6MTU5MTE3MjU5MywianRpIjoiTTNHWkMxTXhmWmJpQllxbyIsInN1YiI6NSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.1iM7Qc0vSIwbs-aGiBnBygrm2CJHi6wnCaagMBvEghs"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ali",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "example3@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/root/jwtApp/public/api/users/2",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"root",
+						"jwtApp",
+						"public",
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
